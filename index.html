@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 1em 0;
+    }
+    .container {
+      padding: 2em;
+    }
+    input, button {
+      padding: 0.5em;
+      margin: 0.5em 0;
+      font-size: 1em;
+    }
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Online Flight Tracker</h1>
+  </header>
+  <div class="container">
+    <h2>Search for a Flight</h2>
+    <input type="text" id="flightNumber" placeholder="Enter Flight Number">
+    <button onclick="trackFlight()">Track Flight</button>
+    <div id="flightDetails"></div>
+    <div id="map"></div>
+  </div>
+
+  <!-- Include Frontend JavaScript -->
+  <script src="frontend.js"></script>
+
+  <!-- Include Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
